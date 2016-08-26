@@ -7,10 +7,10 @@ var TodoSearch = React.createClass({
 
     this.props.onSearch(showCompleted, searchText);
   },
-  
+
   render: function () {
     return (
-      <div>
+      <div className="container__header">
         <div>
           <input type="search" ref="searchText" placeholder="Search todos" onChange={this.handleSearch}/>
         </div>
