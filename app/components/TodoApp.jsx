@@ -15,9 +15,11 @@ var TodoApp = React.createClass({
       todos: TodoAPI.getTodos()
     };
   },
+
   componentDidUpdate: function () {
     TodoAPI.setTodos(this.state.todos);
   },
+
   handleAddTodo: function (text) {
     this.setState({
       todos: [
@@ -32,6 +34,7 @@ var TodoApp = React.createClass({
       ]
     });
   },
+
   handleToggle: function (id) {
     var updatedTodos = this.state.todos.map((todo) => {
       if (todo.id === id) {
@@ -41,15 +44,16 @@ var TodoApp = React.createClass({
 
       return todo;
     });
-
     this.setState({todos: updatedTodos});
   },
+
   handleSearch: function (showCompleted, searchText) {
     this.setState({
       showCompleted: showCompleted,
       searchText: searchText.toLowerCase()
     });
   },
+
   render: function () {
     var {todos, showCompleted, searchText} = this.state;
     var filteredTodos = TodoAPI.filterTodos(todos, showCompleted, searchText);

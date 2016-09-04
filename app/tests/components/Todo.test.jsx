@@ -11,13 +11,13 @@ describe('Todo', () => {
     expect(Todo).toExist();
   })
 
-  it('should call onToggle prop w id on click', () => {
-    var todoData = {
-      id: 199,
-      text: 'Write todo.test.jsx',
-      completed: true
-    };
-    var todoApp = TestUtils.renderIntoDocument(<TodoApp/>);
-    todo
-  });
+  // it('should call onToggle prop w id on click', () => {
+  //   var todoData = {
+  //     id: 199,
+  //     text: 'Write todo.test.jsx',
+  //     completed: true
+  //   };
+  //   var todoApp = TestUtils.renderIntoDocument(<TodoApp/>);
+  //   todo
+  // });
 })
