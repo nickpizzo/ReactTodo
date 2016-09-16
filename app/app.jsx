@@ -23,6 +23,7 @@ $(document).foundation();
 require('style!css!sass!applicationStyles')
 
 ReactDOM.render(
+  //to give app access to the redux store
   <Provider store={store}>
     <TodoApp/>
   </Provider>,
